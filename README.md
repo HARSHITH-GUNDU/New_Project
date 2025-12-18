@@ -122,22 +122,7 @@ Notes & hardening included in this implementation:
   - `server/scripts/concurrency-test.js` to validate RSVP atomicity.
   - Server ensures `server/uploads/` exists on startup.
 
-## Troubleshooting & Notes
 
-- If uploads fail, confirm `server/uploads` exists; server creates it automatically when starting.
-- If you see quick `confirm`-related ESLint warnings, they were replaced with `window.confirm(...)`.
-- If `npm install` fails with registry errors, run:
-
-```powershell
-npm config set registry https://registry.npmjs.org/
-npm install
-```
-
-## Next steps (optional enhancements)
-
-- Migrate older event documents to normalize attendee ids to ObjectId (small migration script).
-- Use S3 (or another object store) for images and serve via CDN.
-- Add server-side pagination and search endpoints for large datasets.
 - Add rate-limiting, logging, and monitoring for production readiness.
 
 ---
